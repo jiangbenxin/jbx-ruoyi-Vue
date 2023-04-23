@@ -75,6 +75,32 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '',
+    component: Layout,
+    redirect: 'jbxComponents',
+    children: [
+      {
+        path: 'jbxComponents',
+        component: () => import('@/views/jbxComponents/index'),
+        name: 'jbxComponents',
+        meta: { title: 'jbx的二次封装组件', icon: 'dashboard', affix: true }
+      }
+    ]
+  },
+  {
+    path: '',
+    component: Layout,
+    redirect: 'jbxTools',
+    children: [
+      {
+        path: 'jbxTools',
+        component: () => import('@/views/jbxTools/index'),
+        name: 'jbxTools',
+        meta: { title: 'jbx的npm包的使用', icon: 'dashboard', affix: true }
+      }
+    ]
+  },
+  {
     path: '/user',
     component: Layout,
     hidden: true,

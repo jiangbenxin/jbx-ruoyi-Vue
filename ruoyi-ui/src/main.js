@@ -37,8 +37,14 @@ import DictTag from '@/components/DictTag'
 import VueMeta from 'vue-meta'
 // 字典数据组件
 import DictData from '@/components/DictData'
+// sha256加密
+import { sha256 } from 'js-sha256'
+// md5加密
+import md5 from 'js-md5';
 
 // 全局方法挂载
+Vue.prototype.$md5 = md5;
+Vue.prototype.$sha256 = sha256
 Vue.prototype.getDicts = getDicts
 Vue.prototype.getConfigKey = getConfigKey
 Vue.prototype.parseTime = parseTime
